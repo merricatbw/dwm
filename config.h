@@ -7,9 +7,9 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Iosevka Nerd Font:pixelsize=17:antialias=true:autohinting=true" };
 static const char dmenufont[]       = "Iosevka Nerd Font:pixelsize=17:antialias=true:autohinting=true";
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray3[]       = "#ebdbb2";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char col_yellow[]      = "#d79921";
@@ -36,6 +36,7 @@ static const Rule rules[] = {
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int attachbelow = 1;
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
@@ -58,7 +59,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-p", "RUN", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-p", "RUN ", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
